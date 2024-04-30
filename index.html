@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Quiz App</title>
+  </head>
+  <body>
+    <div
+      class="main-section min-vh-100 d-flex flex-column justify-content-center align-content-center"
+    >
+      <header>
+        <div class="container">
+          <div class="heading mx-auto mb-5">
+            <h1>Quiz APP</h1>
+          </div>
+        </div>
+      </header>
+      <section class="main-sec">
+        <div class="container">
+          <div class="row">
+            <form
+              action=""
+              class="quiz-form d-flex flex-column col-md-8 mx-auto"
+            >
+              <div class="form-floating mb-3">
+                <select
+                  class="form-select"
+                  id="quizCategory"
+                  aria-label="Floating label select example"
+                >
+                  <option selected value="" id="defaultCategory">
+                    Any Category
+                  </option>
+                  <option value="9">General Knowledge</option>
+                  <option value="23">History</option>
+                  <option value="21">Sports</option>
+                  <option value="27">Animals</option>
+                  <option value="11">Entertainment:Film</option>
+                </select>
+                <label for="quizCategory">Choose Category</label>
+              </div>
+              <div class="form-floating mb-3">
+                <select
+                  class="form-select"
+                  id="quizDifficulty"
+                  aria-label="Floating label select example"
+                >
+                  <option selected value="" id="defaultLevel">Any Level</option>
+                  <option value="easy">Easy</option>
+                  <option value="medium">Medium</option>
+                  <option value="hard">Hard</option>
+                </select>
+                <label for="quizDifficulty">Choose Difficulty Level</label>
+              </div>
+              <div class="form-floating">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="numOfQs"
+                  placeholder="Password"
+                />
+                <label for="numOfQs">Number of Questions</label>
+              </div>
+              <button class="btn btn-primary my-3" type="button" id="formBtn">
+                Start
+              </button>
+              <p class="alert"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="quiz-sec d-none">
+        <div class="container">
+          <div class="row" id="qsRow"></div>
+        </div>
+      </section>
+
+      <section class="score d-none">
+       
+      </section>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
